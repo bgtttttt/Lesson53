@@ -18,6 +18,7 @@ public:
 
 
 	Student();
+	Student(string name);
 	Student(string, int, double);
 	~Student();
 
@@ -28,6 +29,7 @@ public:
 
 	double getMark();
 	void setMark(int m);
+
 
 	static int getCount();
 

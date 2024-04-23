@@ -5,7 +5,10 @@ int Student::count = 0;
 Student::Student() : Student("no name", 6, 4) {
 }
 
-Student::Student(string name, int age = 14, double mark = 4) : name(name), age(age), mark(mark) {
+Student::Student(string name) : Student(name, 6, 4) {
+}
+
+Student::Student(string name, int age, double mark) : name(name), age(age), mark(mark) {
 	count++;
 }
 

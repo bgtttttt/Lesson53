@@ -2,20 +2,23 @@
 #include <iostream>
 using namespace std;
 
-void test() {
-	Student st1{ "Alex", 14, 9 };
-	Student st2{ "Alex", 14, 9 };
-	Student st3{ "Alex", 14, 9 };
-	Student st4{ "Alex", 14, 9 };
-}
-
 int main() {
-	Student st1{ "Alex", 14, 9 };
-	Student st2{ "Alex", 14, 9 };
-	Student st3{ "Alex", 14, 9 };
-	test();
+	Group groupA;
+	Student st1{ "Alex", 14, 20 };
+	Student st2{ "Peter", 16, 9 };
+	Student st3("Alice");
+	
+	groupA.add(st1);
+	groupA.add(st2);
+	groupA.add(st3);
 
-	cout << Student::getCount() << endl;
+	cout << "Before:\n";
+	cout << groupA.convertToString() << endl;
+
+	groupA.remove(st3);
+
+	cout << "After:\n";
+	cout << groupA.convertToString() << endl;
 
 	return 0;
 }
